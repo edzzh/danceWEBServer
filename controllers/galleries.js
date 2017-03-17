@@ -3,4 +3,4 @@
 //exports.[tava funkcijas vards] = function(req,res){};
 
 var mongoose = require('mongoose');
-Member = mongoose.model('members');
+Gallery = mongoose.model('gallery');

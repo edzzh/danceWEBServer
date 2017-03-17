@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var mongoUrl = 'mongodb://localhost/...';
 var port = 3004, app = express();
 
-require('./models/member');
+require('./models/gallery');
 require('./routes')(app);
 
 mongoose.connect(mongoUrl);
