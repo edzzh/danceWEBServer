@@ -1,8 +1,10 @@
 //servera galvene => visa darbiba notiek te
 var express = require('express');
 var mongoose = require('mongoose');
-var mongoUrl = 'mongodb://localhost/...';
+var mongoUrl = 'mongodb://localhost/webGallery';
 var port = 3004, app = express();
+
+app.use(express.static('staticDirectory'));
 
 require('./models/gallery');
 require('./routes')(app);

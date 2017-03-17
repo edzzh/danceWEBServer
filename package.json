@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/edzzh/danceWEBServer/issues"
   },
-  "homepage": "https://github.com/edzzh/danceWEBServer#readme"
+  "homepage": "https://github.com/edzzh/danceWEBServer#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }

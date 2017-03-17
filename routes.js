@@ -2,4 +2,6 @@
 //app.get (datu izgushana) vai app.post (datu ievietoshana)
 module.exports = function(app){
     var gallery = require('./controllers/galleries');
+    app.post('/insertPic', gallery.insertPicture);
+    app.get('/getPic', gallery.getPicture);
 }

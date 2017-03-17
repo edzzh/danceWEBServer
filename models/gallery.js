@@ -2,9 +2,9 @@
 var mongoose = require('mongoose');
 Schema = mongoose.Schema;
 
-var GallerySchema = new Schema({
-  id: Number,
+var GallerySchema = new mongoose.Schema({
+  _id: Number,
   link: String
 });
 
-mongoose.model('gallery', GallerySchema);
+mongoose.model('gallery', GallerySchema, 'imageGallery');
