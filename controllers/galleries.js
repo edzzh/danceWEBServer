@@ -5,6 +5,7 @@ var fs = require('fs');
 var mongoose = require('mongoose');
 Gallery = mongoose.model('gallery');
 
+//Attelu Insert
 exports.insertPicture = function(req,res){
   console.log("Hello!");
 }
