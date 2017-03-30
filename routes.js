@@ -4,6 +4,6 @@ var cors = require('cors');
 
 module.exports = function(app){
     var gallery = require('./controllers/galleries');
-    app.post('/insertPic', gallery.insertPicture);
+    app.post('/insertPic', cors(), gallery.insertPicture);
     app.get('/getPic', cors(), gallery.getPicture);
 }

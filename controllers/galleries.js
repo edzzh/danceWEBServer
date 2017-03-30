@@ -7,7 +7,7 @@ Gallery = mongoose.model('gallery');
 
 //Attelu Insert
 exports.insertPicture = function(req,res){
-  console.log("Hello!");
+
 }
 
 //Izvada Attelu Info
