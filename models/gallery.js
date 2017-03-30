@@ -1,10 +1,12 @@
 //Gallery datu bazes shema
 var mongoose = require('mongoose');
+var autoIncrement = require("mongodb-autoincrement");
 Schema = mongoose.Schema;
 
-var GallerySchema = new Schema({
-  id: Number,
+var GallerySchema = new mongoose.Schema({
+  _id: Number,
   link: String
 });
 
-mongoose.model('gallery', GallerySchema);
+GallerySchema.plugin(autoIncrement.mongoosePlugin);
+mongoose.model('gallery', GallerySchema, 'imageGallery');
