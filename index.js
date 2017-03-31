@@ -9,11 +9,17 @@ var bodyParser = require('body-parser');
 var mongoUrl = 'mongodb://localhost/webGallery';
 var port = 3004, app = express();
 
-
-
 require('./models/members');
 require('./models/gallery');
 require('./routes')(app);
+
+//post and get for server
+app.use("/staticDirectory", express.static(__dirname + '/staticDirectory'));
+
+app.get('/',function(req,res){
+      res.sendFile(__dirname + "/index.html");
+});
+
 
 mongoose.connect(mongoUrl);
 var mongodb = mongoose.connection;
@@ -21,7 +27,7 @@ mongodb.on('error', function(){
   throw new Error('unnable to connect to database at ' + mongodb);
 });
 
-//app.use(multer({dest: '.'}));
+
 
 app.listen(port, '127.0.0.1',function(){
     console.log('Started server');

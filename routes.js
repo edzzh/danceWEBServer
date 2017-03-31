@@ -7,5 +7,4 @@ module.exports = function(app){
 
     app.post('/insertPic', cors(), gallery.insertPicture);
     app.get('/getPic', cors(), gallery.getPicture);
-    app.get('/getMember', cors(), member.getMember)
 }
