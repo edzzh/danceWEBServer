@@ -13,7 +13,7 @@ require('./models/members');
 require('./models/gallery');
 require('./routes')(app);
 
-//post and get for server
+//static directory
 app.use("/staticDirectory", express.static(__dirname + '/staticDirectory'));
 
 app.get('/',function(req,res){
